@@ -12,3 +12,6 @@ function writePassword() {  //Thought process: Second step: Prompts after "click
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); //Thought process: First step: "event" is click to generate password
+
+//create my arrays of input:
+const upperCaseLetters: ['A']['B']['C']['D']['E']['F']['G']['H']['I']['J']['K']['L']['M']['N']['O']['P']['Q']['R']['S']['T']['U']['V']['W']['X']['Y']['Z'];
