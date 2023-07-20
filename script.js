@@ -2,13 +2,19 @@
 var generateBtn = document.querySelector("#generate"); //Button to generate password
 
 // Write password to the #password input
-function writePassword() {  //Thought process: Second step: Prompts after "click", users options to anonymous password
-  var password = generatePassword(); //Function cannot be found on starter code. Task: make a generatePassword function
-  var passwordText = document.querySelector("#password"); //inspect #password, this will be value of password or new password to show here
+//Thought process: Second step: Prompts after "click", users options to anonymous password
+//Function cannot be found on starter code. Task: make a generatePassword function
+//inspect #password, this will be value of password or new password to show here
+//passowrd length 8  to 128 chararacters
 
-  passwordText.value = password; //passowrd length 8  to 128 chararacters
-
+function writePassword() {  
+  var password = generatePassword(); 
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password; 
 }
+
+
+
 
 //create my arrays of user input:
 const upperCaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z'];
@@ -63,7 +69,8 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
         }
         console.log(userPick)
     
-
+//The prompts will be added to the function writepassword,
+// a "for loop" will be used to generate a password with  password acceptance criteria
 
 
 
