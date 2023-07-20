@@ -37,6 +37,15 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
     }
     console.log(userPick)//here it shows which random number was picked
 
+    //Third prompt: Repeat second step, but switch variables to corresponding character for password:
+
+    const upperCase = confirm("Would you like to add a UpperCase letter?")
+    console.log(upperCase)
+    if (upperCase) {
+      userPick.push(upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)])
+    } 
+    console.log(userPick)
+
 
 
 
