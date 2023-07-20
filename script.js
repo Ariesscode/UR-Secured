@@ -42,9 +42,18 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
     const upperCase = confirm("Would you like to add a UpperCase letter?")
     console.log(upperCase)
     if (upperCase) {
-      userPick.push(upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)])
+      userPick.push(upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)]) //random letter chosen if user decides they would like uppercase 
     } 
     console.log(userPick)
+
+    //Fourth prompt:Repeat 1st and second step
+    const lowerCase = confirm("Would you like to add a lowercase letter?")
+    console.log(lowerCase) 
+      if (lowerCase) {
+        userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)])
+      }
+      console.log(userPick)
+    }
 
 
 
