@@ -13,6 +13,7 @@ function writePassword() {
   passwordText.value = password; 
 
   //true prompts:
+
  
   
 
@@ -59,18 +60,18 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
     //Fourth prompt:Repeat 1st and second step
     const lowerCase = confirm("Would you like to add a lowercase letter?")
     console.log(lowerCase) 
-      if (lowerCase) {
-        userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)])
-      }
+    if (lowerCase) {
+      userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)])
+    }
       console.log(userPick)
 
-      //Fifth prompt: Repeat steps before this step
-      const specialSymbols = confirm("Would you like to add a special symbol?")
-      console.log(specialSymbols) 
-        if (specialSymbols) {
-          userPick.push(symbols[Math.floor(Math.random() * symbols.length)])
-        }
-        console.log(userPick)
+    //Fifth prompt: Repeat steps before this step
+    const specialSymbols = confirm("Would you like to add a special symbol?")
+    console.log(specialSymbols) 
+    if (specialSymbols) {
+      userPick.push(symbols[Math.floor(Math.random() * symbols.length)])
+    }
+      console.log(userPick)
     
 //The prompts will be added to the function writepassword,
 // a "for loop" will be used to generate a password with  password acceptance criteria, the prompts only run code 5 times 
@@ -78,6 +79,10 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
 // I am using "var" because length can change depend on user add "character preference"
 //passwordlength has the stored value of what user entered for length of password
 //chose random character to push or add each time loop goes around
+if (numeric === false && upperCase === false && lowerCase === false && specialSymbols === false) {
+  window.alert("Password should have at least one special character! Please try again.")
+  return;
+}
 for (var i = userPick.length; i < passwordLength; i++) {
   userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)]) 
 
@@ -86,8 +91,7 @@ for (var i = userPick.length; i < passwordLength; i++) {
 return userPick.join(""); //this will return final password added to userPick array preference characters
 
 
-   
-  }
+}
 
 
  
