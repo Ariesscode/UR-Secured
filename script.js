@@ -11,9 +11,12 @@ function writePassword() {
   var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
   passwordText.value = password; 
+
+  //true prompts:
+ 
+  
+
 }
-
-
 
 
 //create my arrays of user input:
@@ -70,9 +73,17 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
         console.log(userPick)
     
 //The prompts will be added to the function writepassword,
-// a "for loop" will be used to generate a password with  password acceptance criteria
+// a "for loop" will be used to generate a password with  password acceptance criteria, the prompts only run code 5 times 
+//prompts only include user preference, I need to add rest of letters:
+// I am using "var" because length can change depend on user add "character preference"
+//passwordlength has the stored value of what user entered for length of password
+//chose random character to push or add each time loop goes around
+for (var i = userPick.length; i < passwordLength; i++) {
+  userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)]) 
 
+  }
 
+return userPick.join(""); //this will return final password added to userPick array preference characters
 
 
    
