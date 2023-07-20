@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate"); //Button to generate password
 
-// Write password to the #password input
 //Thought process: Second step: Prompts after "click", users options to anonymous password
 //Function cannot be found on starter code. Task: make a generatePassword function
 //inspect #password, this will be value of password or new password to show here
+//I will need re-usable code
 //passowrd length 8  to 128 chararacters
 
 function writePassword() {  
@@ -12,12 +12,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password; 
 
-  //true prompts:
-
- 
-  
-
-}
+  }
 
 
 //create my arrays of user input:
@@ -46,7 +41,7 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
     if (numeric) { 
       userPick.push(numbers[Math.floor(Math.random() * numbers.length)])
     }
-    console.log(userPick)//here it shows which random number was picked
+    console.log(userPick)//here confirms a random number was picked
 
     //Third prompt: Repeat second step, but switch variables to corresponding character for password:
 
@@ -79,6 +74,8 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
 // I am using "var" because length can change depend on user add "character preference"
 //passwordlength has the stored value of what user entered for length of password
 //chose random character to push or add each time loop goes around
+//If user does not choose any character, the if statement will return
+
 if (numeric === false && upperCase === false && lowerCase === false && specialSymbols === false) {
   window.alert("Password should have at least one special character! Please try again.")
   return;
