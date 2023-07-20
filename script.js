@@ -22,7 +22,8 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
 
    function generatePassword() {
     window.alert(" Hello User! Please configure your secured password here, follow the prompts!"); //when user clicks button, Prompts appear in window
-    
+   
+    //First prompt: User enter length of password between 8-128
     const passwordLength= parseInt(window.prompt("Password must be 8-128 characters in length, please enter the length of your choice: ")); //If user inputs a number as a string it will "parseInt" the string to a number
     console.log(passwordLength, typeof passwordLength) //This will give me information of input such as string, boolean, or number
     if(passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) { //All false input will alert message of password criteria 
@@ -53,7 +54,15 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
         userPick.push(lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)])
       }
       console.log(userPick)
-    }
+
+      //Fifth prompt: Repeat steps before this step
+      const specialSymbols = confirm("Would you like to add a special symbol?")
+      console.log(specialSymbols) 
+        if (specialSymbols) {
+          userPick.push(symbols[Math.floor(Math.random() * symbols.length)])
+        }
+        console.log(userPick)
+    
 
 
 
