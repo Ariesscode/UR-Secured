@@ -21,7 +21,7 @@ const lowerCaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
 const symbols = ['~', '!', '@', '#', '$', '%', '*', '^', '&', '/', '+', '?', '_', '-', '<']; 
 const numbers = [0,1,2,3,4,5,6,7,8,9];
 const userPick = []; //user pick preference of password characters = userpick
-const passwordLength = 8; // setting a default length of 8 because password criterial is between 8 and 128
+const passwordLength = 8; // setting a default length of 8 because password criteria is between 8 and 128
 
 generateBtn.addEventListener("click", writePassword); //Thought process: First step: "event" is click to generate password
 
@@ -35,7 +35,7 @@ generateBtn.addEventListener("click", writePassword); //Thought process: First s
       window.alert("Invalid password! Please try again. Note: Enter password as a number. Your secured password can only be 8-128 characters in length." );
       return;
     }
-    //Second prompt: confirm message needs to be true to add or push random number to be saved to user password array
+    //Second prompt: confirm message needs to be true to concat or push random number to be saved to user password array
     const numeric = confirm("Would you like to add a numeric character to password?")
     console.log(numeric) 
     if (numeric) { 
@@ -85,7 +85,7 @@ for (var i = userPick.length; i < passwordLength; i++) {
 
   }
 
-return userPick.join(""); //this will return final password added to userPick array preference characters
+return userPick.join(""); //this will return final password added to userPick array preference characters as a string
 
 
 }
